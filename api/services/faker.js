@@ -8,6 +8,7 @@ const TYPES = {
     number: faker.random.number,
     currency: faker.finance.amount,
     email: faker.internet.email,
+    phoneNumber: faker.phone.phoneNumber,
 };
 
 module.exports = {
