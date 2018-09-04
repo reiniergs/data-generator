@@ -7,6 +7,7 @@ const TYPES = {
     dateInFuture: faker.date.future,
     number: faker.random.number,
     currency: faker.finance.amount,
+    email: faker.internet.email,
 };
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
                 record[key] = TYPES[type]();
             }
         });
+        record.id = faker.random.uuid();
         return record;
     }
 };
